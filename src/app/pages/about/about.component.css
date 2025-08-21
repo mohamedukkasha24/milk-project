@@ -1,58 +1,56 @@
-/* circle icons */
+:root {
+  --primary-color: #198754; /* Your green color */
+  --secondary-color: #f8f9fa; /* Your light background */
+  --text-dark: #212529;
+  --text-muted: #6c757d;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .icon-circle {
   width: 60px;
   height: 60px;
-  font-size: 28px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  font-size: 1.5rem;
 }
 
-/* button hover effect */
-.btn-hover {
-  transition: 0.3s ease-in-out;
-}
-
-.btn-hover:hover {
-  background-color: #28a745;
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(40, 167, 69, 0.6);
-}
-
-/* fade-in animation */
 .fade-in {
   opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-.icon-circle:hover {
-  transform: translateY(-5px);
-  transition: transform 0.3s ease;
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .fade-in-delay {
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-  animation-delay: 0.5s;
-}
-.col-md-4:nth-child(1) .fade-in-delay {
-  animation-delay: 0.5s;
-}
-.col-md-4:nth-child(2) .fade-in-delay {
-  animation-delay: 0.7s;
-}
-.col-md-4:nth-child(3) .fade-in-delay {
-  animation-delay: 0.9s;
+  transition-delay: 0.2s;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+.section-divider {
+  width: 80px;
+  height: 3px;
+  background-color: var(--primary-color);
+  margin: 0 auto 1.5rem;
+}
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.rounded-top-left-right {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
