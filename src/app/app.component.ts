@@ -15,4 +15,5 @@ export class AppComponent implements OnInit {
       once: true, // animation happens only once
     });
   }
+  
 }

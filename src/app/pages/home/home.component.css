@@ -1,4 +1,43 @@
-.btn-success:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(40, 167, 69, 0.6);
+.bgimg {
+  position: relative;
+  background-image: url("../../../assets/banner-4.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* 👈 shift content to left */
+  text-align: left; /* 👈 align text left */
+  padding-left: 80px; /* 👈 space from left side */
+  overflow: hidden;
+}
+.inside {
+  position: absolute; /* 👈 overlay inside parent */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* 👈 take full height */
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent overlay */
+  z-index: 0;
+}
+.bgimg > *:not(.inside) {
+  position: relative;
+  z-index: 1; /* keep text above overlay */
+}
+
+/* For small devices */
+@media (max-width: 768px) {
+  .bgimg {
+    min-height: 70vh;
+    padding-left: 40px; /* reduce gap on tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .bgimg {
+    min-height: 50vh;
+    padding: 20px; /* mobile friendly */
+  }
 }
