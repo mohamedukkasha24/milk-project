@@ -1,0 +1,51 @@
+/* 
+.card {
+  border-radius: 16px;
+  background: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.form-label {
+  font-weight: 600;
+  color: #2d6a4f;
+}
+
+
+.form-control {
+  border-radius: 10px;
+  padding: 10px 14px;
+  border: 1px solid #cfd9de;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: #40916c;
+  box-shadow: 0 0 6px rgba(64, 145, 108, 0.4);
+}
+
+
+.text-danger {
+  font-size: 0.85rem;
+}
+
+
+.btn-success {
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #40916c, #2d6a4f);
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #2d6a4f, #1b4332);
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+} */

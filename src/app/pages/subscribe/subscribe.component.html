@@ -1,0 +1,128 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow-lg border-0 p-4">
+        <h2 class="fw-bold text-center text-success mb-3">🥛 Subscribe to Daily Milk</h2>
+        <p class="text-center text-muted mb-4">
+          Fresh farm milk delivered at your doorstep. Choose your plan below 🚚
+        </p>
+
+        <form [formGroup]="subscribeForm" (ngSubmit)="onSubmit()">
+
+          <!-- Name -->
+          <div class="mb-3">
+            <label class="form-label fw-bold">Full Name</label>
+            <input type="text" class="form-control" formControlName="name" placeholder="Enter your name" />
+            <div class="text-danger small"
+              *ngIf="subscribeForm.get('name')?.touched && subscribeForm.get('name')?.invalid">
+              Name is required (min 3 chars).
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="mb-3">
+            <label class="form-label fw-bold">Email</label>
+            <input type="email" class="form-control" formControlName="email" placeholder="Enter your email" />
+            <div class="text-danger small"
+              *ngIf="subscribeForm.get('email')?.touched && subscribeForm.get('email')?.invalid">
+              Valid email is required.
+            </div>
+          </div>
+
+          <!-- Address -->
+          <div class="mb-3">
+            <label class="form-label fw-bold">Delivery Address</label>
+            <textarea class="form-control" rows="3" formControlName="address"
+              placeholder="Enter your address"></textarea>
+            <div class="text-danger small"
+              *ngIf="subscribeForm.get('address')?.touched && subscribeForm.get('address')?.invalid">
+              Address is required.
+            </div>
+          </div>
+
+          <!-- Quantity -->
+          <div class="mb-3">
+            <label class="form-label fw-bold">Quantity (Liters)</label>
+            <div class="d-flex align-items-center">
+              <button type="button" class="btn btn-outline-success me-2" (click)="decreaseQty()">−</button>
+              <input type="number" class="form-control text-center" formControlName="quantity" />
+              <button type="button" class="btn btn-outline-success ms-2" (click)="increaseQty()">+</button>
+            </div>
+            <div class="text-danger small"
+              *ngIf="subscribeForm.get('quantity')?.touched && subscribeForm.get('quantity')?.invalid">
+              Quantity must be at least 1.
+            </div>
+          </div>
+
+          <!-- Start Date -->
+          <div class="mb-3">
+            <label class="form-label fw-bold">Start Date</label>
+            <input type="date" class="form-control" formControlName="startDate" />
+            <div class="text-danger small"
+              *ngIf="subscribeForm.get('startDate')?.touched && subscribeForm.get('startDate')?.invalid">
+              Please select a start date.
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-success w-100 fw-bold mt-2 glow-btn" [disabled]="subscribeForm.invalid">
+            🚀 Subscribe Now
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card {
+    border-radius: 16px;
+    background: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .form-label {
+    font-weight: 600;
+    color: #2d6a4f;
+  }
+
+  .form-control {
+    border-radius: 10px;
+    padding: 10px 14px;
+    border: 1px solid #cfd9de;
+    transition: 0.2s;
+  }
+
+  .form-control:focus {
+    border-color: #40916c;
+    box-shadow: 0 0 6px rgba(64, 145, 108, 0.4);
+  }
+
+  .btn-success {
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #40916c, #2d6a4f);
+    border: none;
+    transition: 0.3s;
+  }
+
+  .btn-success:hover {
+    background: linear-gradient(135deg, #2d6a4f, #1b4332);
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .glow-btn {
+    transition: all 0.3s ease;
+  }
+
+  .glow-btn:hover {
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.6);
+    transform: scale(1.05);
+  }
+</style>
