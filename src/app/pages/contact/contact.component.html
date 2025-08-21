@@ -128,58 +128,5 @@
                   </div>
               </div>
           </div>
-
-          <!-- Phone -->
-          <div class="col-md-4 mb-3">
-            <div class="p-3 rounded-3 shadow-sm h-100 bg-white hover-card">
-              <div class="icon-circle mb-2">📞</div>
-              <h6 class="fw-bold">Call Us</h6>
-              <p class="small text-muted mb-0">+91 90035 13313</p>
-            </div>
-          </div>
-
-          <!-- Email -->
-          <div class="col-md-4 mb-3">
-            <div class="p-3 rounded-3 shadow-sm h-100 bg-white hover-card">
-              <div class="icon-circle mb-2">✉️</div>
-              <h6 class="fw-bold">Email</h6>
-              <p class="small text-muted mb-0">support&#64;nellaifreshmilk.com</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Map -->
-        <div class="mb-4">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1526.0145080354866!2d77.77437821259112!3d8.719639180730251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b040ddda3d720af%3A0x8aeac2ccf04c242f!2sArunachalapuram%20A%20Colony%2C%20KTC%20Nagar%2C%20Tirunelveli%2C%20Tamil%20Nadu%20627011!5e0!3m2!1sen!2sin!4v1755688251879!5m2!1sen!2sin"
-            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-        
-
-
-        <!-- Contact Form -->
-        <div class="text-start">
-          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <input type="text" formControlName="name" class="form-control rounded-3" placeholder="Your Name"
-                  required>
-              </div>
-              <div class="col-md-6 mb-3">
-                <input type="email" formControlName="email" class="form-control rounded-3" placeholder="Your Email"
-                  required>
-              </div>
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control rounded-3" formControlName="message" rows="4" placeholder="Your Message"
-                required></textarea>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn btn-success px-4 fw-bold rounded-pill glow-btn">📩 Send Message</button>
-            </div>
-          </form>
-        </div>
       </div>
   </div>
