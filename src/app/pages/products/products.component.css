@@ -1,16 +1,9 @@
-/* .product-img {
-  height: 300px;      
-  width: 100%;            
-  object-fit: cover;    
-  border-top-left-radius: 0.5rem; 
-  border-top-right-radius: 0.5rem;
-}
-.hover-card {
+/* hover-zoom {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.hover-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+.hover-zoom:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+  transition: all o.9s linear;
 } */
-
-

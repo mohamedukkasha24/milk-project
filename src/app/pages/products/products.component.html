@@ -4,87 +4,125 @@
   </h2>
 
   <!-- Milk -->
-  <div class="row flex-column flex-lg-row align-items-center mb-5">
-    <div class="col-lg-6 text-center mb-3 mb-lg-0">
-      <img
-        src="/Images/milklogo.webp"
-        alt="Uzhavarbumi's Pure Cow Milk"
-        class="img-fluid shadow rounded object-fit-cover"
-        style="width: 250px; height: 250px;"
+  <div class="row flex-column flex-lg-row align-items-center  mb-5">
+    <div class="col-lg-6 text-center mb-3 mb-lg-0 ">
+      <a routerLink="/milk-product" class="d-inline-block overflow-hidden shadow-sm rounded">
+        <img
+        src="/Images/milklogo.png"
+        class="img-fluid shadow rounded transition-transform"
+        style="width:250px; height:250px; cursor:pointer;"
+        onmouseover="this.style.transform='scale(1.1)'; this.style.transition='transform 0.5s ease';"
+        onmouseout="this.style.transform='scale(1)'; this.style.transition='transform 0.5s ease';"
       />
+      
+      </a>
     </div>
+  
     <div class="col-lg-6 text-center text-lg-start">
       <h4 class="mb-3 text-dark">Pure Cow Milk</h4>
       <p>
-        FFM delivers you hygienic, chemical-free milk, freshly collected from
-        local farmers.
+        FFM delivers you hygienic, chemical-free milk, freshly collected from local farmers.
       </p>
-      <a href="#" class="text-success fw-bold text-decoration-none">
+      <a routerLink="/milk-product" class="text-success fw-bold text-decoration-none">
         Know more about our Milk
       </a>
     </div>
   </div>
+  
 
   <!-- Ghee -->
-  <div class="row flex-column flex-lg-row align-items-center mb-5">
-    <div class="col-lg-6 text-center mb-3 mb-lg-0">
+  <div class="row flex-column flex-lg-row align-items-center mb-5 position-relative">
+    <div class="col-lg-6 text-center mb-3 mb-lg-0 position-relative">
       <img
         src="/Images/Ghee.jpeg"
-        alt="Uzhavarbumi's Pure Cow Ghee"
+        alt="Nellai Fressh Milk's Pure Cow Ghee"
         class="img-fluid shadow rounded object-fit-cover"
-        style="width: 250px; height: 250px;"
+        style="width: 250px; height: 250px; filter: blur(2px); opacity: 0.7;"
       />
+      <!-- Glass Effect Overlay -->
+      <div
+        class="position-absolute top-50 start-50 translate-middle bg-white bg-opacity-25 backdrop-blur text-dark fw-bold rounded p-3 shadow"
+        style="width: 200px; text-align: center;"
+      >
+        <span style="font-size: 1.2rem;">Coming Soon</span>
+      </div>
     </div>
+  
     <div class="col-lg-6 text-center text-lg-start">
       <h4 class="mb-3 text-dark">Pure Cow Ghee</h4>
       <p>
         FFM's ghee / clarified butter is traditionally made from pure cow milk.
       </p>
-      <a href="#" class="text-success fw-bold text-decoration-none">
+      <a  class="text-success fw-bold text-decoration-none disabled" tabindex="-1" aria-disabled="true">
         Know more about our Ghee
       </a>
     </div>
   </div>
+  
 
-  <!-- Fresh Curd -->
-  <div class="row flex-column flex-lg-row align-items-center mb-5">
-    <div class="col-lg-6 text-center mb-3 mb-lg-0">
-      <img
-        src="/Images/curd.jpg"
-        alt="Uzhavarbumi's Fresh Curd"
-        class="img-fluid shadow rounded object-fit-cover"
-        style="width: 250px; height: 250px;"
-      />
-    </div>
-    <div class="col-lg-6 text-center text-lg-start">
-      <h4 class="mb-3 text-dark">Fresh Curd</h4>
-      <p>
-        FFM’s curd is creamy, thick, and made from pure cow milk – perfect for a healthy diet.
-      </p>
-      <a href="#" class="text-success fw-bold text-decoration-none">
-        Know more about our Curd
-      </a>
+<!-- Fresh Curd -->
+<div class="row flex-column flex-lg-row align-items-center mb-5 position-relative">
+  <div class="col-lg-6 text-center mb-3 mb-lg-0 position-relative">
+    <img
+      src="/Images/curd.jpg"
+      alt="Nellai Fressh Milk's Fresh Curd"
+      class="img-fluid shadow rounded object-fit-cover"
+      style="width: 250px; height: 250px; filter: blur(2px); opacity: 0.7;"
+    />
+
+    <!-- Glass Effect Overlay -->
+    <div
+      class="position-absolute top-50 start-50 translate-middle bg-white bg-opacity-25 backdrop-blur rounded shadow-lg p-3"
+      style="width: 200px; text-align: center;"
+    >
+      <span class="fw-bold text-dark" style="font-size: 1.2rem;">
+        Coming Soon 
+      </span>
     </div>
   </div>
 
-  <!-- Fresh Paneer -->
-  <div class="row flex-column flex-lg-row align-items-center mb-5">
-    <div class="col-lg-6 text-center mb-3 mb-lg-0">
-      <img
-        src="/Images/paneer.jpeg"
-        alt="Uzhavarbumi's Fresh Paneer"
-        class="img-fluid shadow rounded object-fit-cover"
-        style="width: 250px; height: 250px;"
-      />
-    </div>
-    <div class="col-lg-6 text-center text-lg-start">
-      <h4 class="mb-3 text-dark">Fresh Paneer</h4>
-      <p>
-        FFM’s paneer is soft, fresh, and made from high-quality cow milk, perfect for cooking.
-      </p>
-      <a href="#" class="text-success fw-bold text-decoration-none">
-        Know more about the Paneer
-      </a>
+  <div class="col-lg-6 text-center text-lg-start">
+    <h4 class="mb-3 text-dark">Fresh Curd</h4>
+    <p>
+      FFM’s curd is creamy, thick, and made from pure cow milk – perfect for a healthy diet.
+    </p>
+    <a  class="text-success fw-bold text-decoration-none disabled" tabindex="-1" aria-disabled="true">
+      Know more about our Curd
+    </a>
+  </div>
+</div>
+
+
+<!-- Fresh Paneer -->
+<div class="row flex-column flex-lg-row align-items-center mb-5 position-relative">
+  <div class="col-lg-6 text-center mb-3 mb-lg-0 position-relative">
+    <img
+      src="/Images/paneer.jpeg"
+      alt="Nellai Fressh Milk's Fresh Paneer"
+      class="img-fluid shadow rounded object-fit-cover"
+      style="width: 250px; height: 250px; filter: blur(2px); opacity: 0.7;"
+    />
+
+    <!-- Glass Effect Overlay -->
+    <div
+      class="position-absolute top-50 start-50 translate-middle bg-white bg-opacity-25 backdrop-blur rounded shadow-lg p-3"
+      style="width: 200px; text-align: center;"
+    >
+      <span class="fw-bold text-dark" style="font-size: 1.2rem;">
+         Coming Soon 
+      </span>
     </div>
   </div>
+
+  <div class="col-lg-6 text-center text-lg-start">
+    <h4 class="mb-3 text-dark">Fresh Paneer</h4>
+    <p>
+      FFM’s paneer is soft, fresh, and made from high-quality cow milk, perfect for cooking.
+    </p>
+    <a  class="text-success fw-bold text-decoration-none disabled" tabindex="-1" aria-disabled="true">
+      Know more about the Paneer
+    </a>
+  </div>
+</div>
+
 </div>

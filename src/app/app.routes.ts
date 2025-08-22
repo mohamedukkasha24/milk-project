@@ -6,6 +6,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { SubscribeComponent } from './pages/subscribe/subscribe.component';
 import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
+import { MilkProductComponent  } from './pages/milk-product/milk-product.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,5 +15,6 @@ export const routes: Routes = [
   { path: 'subscribe', component: SubscribeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'testimonials', component:TestimonialsComponent},
-  { path: 'gallery', component:GalleryComponent}
+  { path: 'gallery', component:GalleryComponent},
+  { path: 'milk-product', component:MilkProductComponent},
 ];
