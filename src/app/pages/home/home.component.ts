@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,4 +9,8 @@ import { RouterLink } from '@angular/router';
 })
 export class HomeComponent {
 
+  constructor(private route:Router){}
+ rou(){
+    this.route.navigateByUrl('/about')
+ }
 }

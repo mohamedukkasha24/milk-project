@@ -1,8 +1,8 @@
-<div class="bgimg">
+<div class="bgimg d-flex align-items-center justify-content-start text-start px-4 px-md-5">
   <div class="inside"></div>
-  <div class="text-white">
+  <div class="text-white position-relative">
     <h1 class="display-4 fw-bold text-white mb-3 animate__animated animate__fadeInLeft">
-      Nellai Fresh Milk <br /> Delivered Daily 🥛
+      Nellai Fresh Milk <br /> Delivered Daily 
     </h1>
     <p class="lead text-white animate__animated animate__fadeInLeft animate__delay-1s">
       100% pure, eco-friendly bottled milk straight from our farmers to your doorstep.
@@ -12,3 +12,47 @@
     </a>
   </div>
 </div>
+
+<!-- Features Section -->
+<div class="features-section py-5 bg-light">
+  <div class="container text-center">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="p-4 h-100 border rounded shadow-sm">
+          <i class="bi bi-cash-coin feature-icon display-3 text-success"></i>
+          <h5 class="fw-bold mt-3 text-decoration-underline">Affordable</h5>
+          <p class="text-muted">Pure farm milk at prices every family can enjoy daily.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 h-100 border rounded shadow-sm">
+          <i class="bi bi-truck feature-icon display-3 text-success"></i>
+          <h5 class="fw-bold mt-3 text-decoration-underline">Accessible</h5>
+          <p class="text-muted">Delivered on time to your doorstep across the city.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 h-100 border rounded shadow-sm">
+          <i class="bi bi-shield-check feature-icon display-3 text-success"></i>
+          <h5 class="fw-bold mt-3 text-decoration-underline">Assured</h5>
+          <p class="text-muted">100% pure, chemical-free milk your family can trust.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About Section -->
+<section class="about-section py-5">
+  <div class="container">
+    <div class="card border-0 rounded-4 text-center bg-white anime mx-auto p-4">
+      <h2 class="fw-bold mb-3">What is Nellai Farm Milk?</h2>
+      <p class="text-muted mb-4">
+        Nellai Farm Milk delivers 100% pure, farm-fresh cow milk straight to your doorstep every morning. 
+        Packed in eco-friendly glass bottles, our milk is free from preservatives and chemicals. 
+        Enjoy the true goodness of nature – healthy, safe, and fresh.
+      </p>
+      <button type="button" class="btn btn-success btn-sm px-4 py-2 rounded-3 shadow-sm" [routerLink]="'/about'">Know More</button>
+    </div>
+  </div>
+</section>
