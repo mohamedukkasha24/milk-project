@@ -10,6 +10,8 @@ import { MilkProductComponent  } from './pages/milk-product/milk-product.compone
 import { ProfileComponent } from './pages/profile/profile.component';
 import { LoginComponent } from './Admin-pages/login/login.component';
 import { SignupComponent } from './Admin-pages/signup/signup.component';
+import { AdminPortalComponent } from './Admin-pages/admin-portal/admin-portal.component';
+import { EmployeePortalComponent } from './Admin-pages/employee-portal/employee-portal.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,4 +25,7 @@ export const routes: Routes = [
   { path: 'login', component:LoginComponent},
   { path: 'signup', component:SignupComponent},
   { path: 'profile', component:ProfileComponent},
+  { path:'admin-portal', component:AdminPortalComponent},
+  { path:'employee-portal', component:EmployeePortalComponent},
+
 ];

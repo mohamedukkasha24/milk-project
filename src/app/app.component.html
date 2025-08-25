@@ -23,12 +23,12 @@
           <a class="nav-link fw-semibold" routerLink="/contact" routerLinkActive="active-link">Contact</a>
         </li>
         <!-- If user is NOT logged in -->
-        <li class="nav-item" *ngIf="!auth.isLoggedIn()">
+        <!-- <li class="nav-item" *ngIf="!auth.isLoggedIn()">
           <a class="btn btn-success px-3" routerLink="/login">Login</a>
-        </li>
+        </li> -->
 
         <!-- If user IS logged in -->
-        <li class="nav-item dropdown" *ngIf="auth.isLoggedIn()">
+        <!-- <li class="nav-item dropdown" *ngIf="auth.isLoggedIn()">
           <a class="nav-link dropdown-toggle fw-semibold text-success" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             <img [src]="auth.getActiveUser()?.avatar || 'assets/default-avatar.png'" width="30" height="30"
@@ -42,7 +42,7 @@
             </li>
             <li><a class="dropdown-item  text-danger" (click)="auth.logout()">Logout</a></li>
           </ul>
-        </li>
+        </li> -->
 
 
 
@@ -93,7 +93,7 @@
       <!-- Social Media -->
       <div class="col-12 col-md-4 mb-4">
         <h6 class="fw-bold text-success text-center">Follow Us</h6>
-        <div class="d-flex justify-content-center ju– Farm to Home 🐄 | Made with ❤️ in Indiastify-content-md-start gap-3 mt-2">
+        <div class="d-flex justify-content-center md-start gap-3 mt-2">
           <a href="https://www.whatsapp.com/" class="text-secondary social-icon" target="_blank"><i
               class="bi bi-whatsapp fs-5"></i></a>
           <a href="https://www.instagram.com/" class="text-secondary social-icon" target="_blank"><i
@@ -103,12 +103,18 @@
           <a href="https://x.com/" class="text-secondary social-icon" target="_blank"><i
               class="bi bi-twitter-x fs-5"></i></a>
         </div>
+        <div class="d-block mt-4 text-center">
+          <h6 class="fw-bold text-success text-center">Login</h6>
+          <a  routerLink="/admin-portal" class="text-secondary nav-link">Admin </a>
+          <a  routerLink="/employee-portal" class="text-secondary nav-link">Employee </a>
+        </div>
       </div>
+
 
     </div>
 
     <!-- Copyright -->
-    <div class="text-center mt-3 border-top border-secondary pt-2">
+    <div class="text-center mt-3 border-top border-secondary pt-2">admin
       <small>© 2025 Nellai Fresh Milk </small>
     </div>
   </div>
