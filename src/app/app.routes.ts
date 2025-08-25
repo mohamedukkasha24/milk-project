@@ -7,9 +7,9 @@ import { SubscribeComponent } from './pages/subscribe/subscribe.component';
 import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { MilkProductComponent  } from './pages/milk-product/milk-product.component';
-import { LoginComponent } from './pages/login/login.component';
-import { SignupComponent } from './pages/signup/signup.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { LoginComponent } from './Admin-pages/login/login.component';
+import { SignupComponent } from './Admin-pages/signup/signup.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,5 +23,4 @@ export const routes: Routes = [
   { path: 'login', component:LoginComponent},
   { path: 'signup', component:SignupComponent},
   { path: 'profile', component:ProfileComponent},
-
 ];
