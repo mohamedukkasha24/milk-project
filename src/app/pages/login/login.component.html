@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+    <div class="card shadow-lg border-0 p-4 login-card">
+        <!-- Logo + Heading -->
+        <div class="text-center mb-4">
+            <img src="/Images/unnamed.webp" alt="Logo" width="70" height="70" class="mb-2">
+            <h4 class="fw-bold text-success mb-1">Nellai Fresh Milk</h4>
+            <p class="text-muted small">Welcome back! Please login to continue</p>
+        </div>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
+            <!-- Email -->
+            <div class="mb-3">
+                <label for="email" class="form-label fw-semibold">Email</label>
+                <input type="email" id="email" formControlName="email" class="form-control"
+                    placeholder="Enter your email">
+                <small class="text-danger" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">
+                    Valid email is required
+                </small>
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3 position-relative">
+                <label for="password" class="form-label fw-semibold">Password</label>
+                <input [type]="showPassword ? 'text' : 'password'" id="password" formControlName="password"
+                    class="form-control pe-5" placeholder="Enter your password">
+
+                <!-- 👁 Eye Icon -->
+                <i class="bi" [ngClass]="showPassword ? 'bi-eye' : 'bi-eye-slash'"
+                    style="cursor:pointer; position:absolute; right:12px; top:50%; transform:translateY(-50%);"
+                    (click)="togglePassword()"></i>
+
+                <small class="text-danger"
+                    *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+                    Password must be at least 6 characters
+                </small>
+            </div>
+
+            <!-- Remember + Forgot -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" formControlName="rememberMe" id="rememberMe">
+                    <label class="form-check-label small" for="rememberMe">Remember Me</label>
+                </div>
+                <a href="#" class="text-success small text-decoration-none">Forgot Password?</a>
+            </div>
+
+            <!-- Login Button -->
+            <button type="submit" class="btn btn-success w-100 fw-semibold mb-3">Login</button>
+            <div *ngIf="errorMessage" class="text-danger text-center small mb-3">
+                {{ errorMessage }}
+            </div>
+            <!-- Signup -->
+            <p class="text-center mt-4 mb-0 small">
+                Don’t have an account? <a routerLink="/signup" class="text-success fw-semibold">Sign Up</a>
+            </p>
+        </form>
+    </div>
+</div>

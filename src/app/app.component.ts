@@ -1,19 +1,21 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { AuthService } from './services/auth.service';
 declare var AOS: any;
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink,CommonModule,FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'milk-project';
-  ngOnInit() {
-    AOS.init({
-      duration: 1000, // animation duration
-      once: true, // animation happens only once
-    });
+
+   constructor(public auth: AuthService) {}
+
+     logout() {
+    this.auth.logout();
   }
-  
 }

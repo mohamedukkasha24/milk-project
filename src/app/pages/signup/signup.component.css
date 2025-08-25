@@ -1,0 +1,29 @@
+.signup-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+}
+
+.signup-card input {
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.btn-success {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.btn-outline-dark,
+.btn-outline-primary {
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+form label {
+  font-size: 14px;
+}
+
+form .form-control {
+  font-size: 14px;
+}

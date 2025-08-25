@@ -27,21 +27,25 @@
 }
 
 .anime::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100px;
-  height: 700%;
-  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  height: 100vh;
+  background-image: linear-gradient(180deg, rgb(15, 119, 12), rgb(15, 119, 12));
   animation: rotBGimg 5s linear infinite;
 }
 
 @keyframes rotBGimg {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .anime::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 2px;
   background: white;
@@ -49,20 +53,55 @@
   z-index: 0;
 }
 
-.anime h2, .anime p, .anime button {
+.anime h2,
+.anime p,
+.anime button {
   position: relative;
   z-index: 1;
 }
 
+/* Product Cards */
+.product-card {
+  max-width: 260px;   /* smaller card */
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Images */
+.product-img {
+  max-width: 120px;   /* smaller image */
+  height: 120px;
+}
+
+
+
 /* Responsive tweaks */
 @media (max-width: 768px) {
-  .bgimg { min-height: 70vh; }
-  .anime h2 { font-size: 1.5rem; }
-  .anime p { font-size: 0.9rem; }
+  .bgimg {
+    min-height: 70vh;
+  }
+  .anime h2 {
+    font-size: 1.5rem;
+  }
+  .anime p {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 576px) {
-  .bgimg { min-height: 50vh; padding: 20px; }
-  .anime h2 { font-size: 1.25rem; }
-  .anime p { font-size: 0.85rem; }
+  .bgimg {
+    min-height: 50vh;
+    padding: 20px;
+  }
+  .anime h2 {
+    font-size: 1.25rem;
+  }
+  .anime p {
+    font-size: 0.85rem;
+  }
 }

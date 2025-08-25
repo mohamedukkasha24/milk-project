@@ -2,7 +2,7 @@
   <div class="inside"></div>
   <div class="text-white position-relative">
     <h1 class="display-4 fw-bold text-white mb-3 animate__animated animate__fadeInLeft">
-      Nellai Fresh Milk <br /> Delivered Daily 
+      Nellai Fresh Milk <br /> Delivered Daily
     </h1>
     <p class="lead text-white animate__animated animate__fadeInLeft animate__delay-1s">
       100% pure, eco-friendly bottled milk straight from our farmers to your doorstep.
@@ -14,25 +14,25 @@
 </div>
 
 <!-- Features Section -->
-<div class="features-section py-5 bg-light">
+<div class="features-section py-5" style="background-color: #F5F5F5;">
   <div class="container text-center">
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="p-4 h-100 border rounded shadow-sm">
+        <div class="p-4 h-100 border rounded shadow-sm bg-white">
           <i class="bi bi-cash-coin feature-icon display-3 text-success"></i>
           <h5 class="fw-bold mt-3 text-decoration-underline">Affordable</h5>
           <p class="text-muted">Pure farm milk at prices every family can enjoy daily.</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="p-4 h-100 border rounded shadow-sm">
+        <div class="p-4 h-100 border rounded shadow-sm bg-white">
           <i class="bi bi-truck feature-icon display-3 text-success"></i>
           <h5 class="fw-bold mt-3 text-decoration-underline">Accessible</h5>
           <p class="text-muted">Delivered on time to your doorstep across the city.</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="p-4 h-100 border rounded shadow-sm">
+        <div class="p-4 h-100 border rounded shadow-sm bg-white">
           <i class="bi bi-shield-check feature-icon display-3 text-success"></i>
           <h5 class="fw-bold mt-3 text-decoration-underline">Assured</h5>
           <p class="text-muted">100% pure, chemical-free milk your family can trust.</p>
@@ -45,14 +45,118 @@
 <!-- About Section -->
 <section class="about-section py-5">
   <div class="container">
-    <div class="card border-0 rounded-4 text-center bg-white anime mx-auto p-4">
-      <h2 class="fw-bold mb-3">What is Nellai Farm Milk?</h2>
+    <div
+      class="card  rounded-4 text-center bg-white anime mx-auto p-4 d-flex align-items-center justify-content-center ">
+      <h2 class="fw-bold mb-3">What is Nellai Fresh Milk?</h2>
       <p class="text-muted mb-4">
-        Nellai Farm Milk delivers 100% pure, farm-fresh cow milk straight to your doorstep every morning. 
-        Packed in eco-friendly glass bottles, our milk is free from preservatives and chemicals. 
+        Nellai Fresh Milk delivers 100% pure, farm-fresh cow milk straight to your doorstep every morning.
+        Packed in eco-friendly glass bottles, our milk is free from preservatives and chemicals.
         Enjoy the true goodness of nature – healthy, safe, and fresh.
       </p>
-      <button type="button" class="btn btn-success btn-sm px-4 py-2 rounded-3 shadow-sm" [routerLink]="'/about'">Know More</button>
+      <button type="button" class="btn btn-success btn-sm px-4 py-2 rounded-3 shadow-sm" [routerLink]="'/about'">Know
+        More</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- Products Section -->
+<section class="products-section py-5" style="background-color: #F5F5F5;">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Our Flagship Products</h2>
+    <div class="row g-4 justify-content-center">
+      <!-- Product 1 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card product-card shadow-sm border-0 rounded-4 text-center p-3">
+
+          <!-- Image Container -->
+          <div class="position-relative">
+            <img src="/Images/milklogo.png" class="product-img mx-auto rounded" alt="Pure Cow Milk"
+              style="filter: blur(2px); opacity: 0.7; width: 100%; max-width: 180px; height: auto;">
+
+            <!-- Coming Soon Overlay -->
+            <div
+              class="position-absolute top-50 start-50 translate-middle bg-white bg-opacity-50 backdrop-blur rounded shadow-lg d-flex align-items-center justify-content-center"
+              style="width: 120px; height: 50px;">
+              <span class="fw-bold text-dark" style="font-size: 12px;">
+                Coming Soon
+              </span>
+            </div>
+          </div>
+
+          <!-- Card Body -->
+          <div class="card-body">
+            <h6 class="fw-bold">Pure Cow Milk</h6>
+            <p class="text-muted small">
+              UB delivers you hygienic, chemical free milk, freshly collected from local farmers.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card product-card shadow-sm border-0 rounded-4 text-center p-3">
+
+          <!-- Image Container -->
+          <div class="position-relative">
+            <img src="/Images/milklogo.png" class="product-img mx-auto rounded" alt="Pure Cow Ghee"
+              style="filter: blur(2px); opacity: 0.7; width: 100%; max-width: 180px; height: auto;">
+
+            <!-- Coming Soon Overlay -->
+            <div
+              class="position-absolute top-50 start-50 translate-middle bg-white bg-opacity-50 backdrop-blur rounded shadow-lg d-flex align-items-center justify-content-center"
+              style="width: 120px; height: 50px;">
+              <span class="fw-bold text-dark" style="font-size: 12px;">
+                Coming Soon
+              </span>
+            </div>
+          </div>
+
+          <!-- Card Body -->
+          <div class="card-body">
+            <h6 class="fw-bold">Pure Cow Ghee</h6>
+            <p class="text-muted small">
+              UB's ghee / clarified butter is traditionally made from pure cow milk.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card product-card shadow-sm border-0 rounded-4 text-center p-3">
+
+          <!-- Image Container -->
+          <div class="position-relative">
+            <img src="/Images/milklogo.png" class="product-img mx-auto rounded" alt="Natural Honey"
+              style="filter: blur(2px); opacity: 0.7; width: 100%; max-width: 180px; height: auto;">
+
+            <!-- Coming Soon Overlay -->
+            <div
+              class="position-absolute top-50 start-50 translate-middle bg-white bg-opacity-50 backdrop-blur rounded shadow-lg d-flex align-items-center justify-content-center"
+              style="width: 120px; height: 50px;">
+              <span class="fw-bold text-dark" style="font-size: 12px;">
+                Coming Soon
+              </span>
+            </div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="card-body">
+            <h6 class="fw-bold">Natural Honey</h6>
+            <p class="text-muted small">
+              UB's honey is unprocessed, unsweetened and freshly collected from a local farm.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Know More Button -->
+    <div class="text-center mt-4">
+      <button type="button" class="btn btn-success btn-sm px-4 py-2 rounded-3 shadow-sm" [routerLink]="'/products'">Know
+        More</button>
     </div>
   </div>
 </section>

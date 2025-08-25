@@ -1,4 +1,26 @@
 /* Active nav link */
+.nav-link {
+  position: relative;
+  color: #000; /* default link color */
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #28a745; /* Bootstrap green (#198754 also works) */
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+
 .active-link {
   color: #28a745 !important;
   font-weight: 600;
