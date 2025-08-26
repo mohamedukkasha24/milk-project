@@ -18,21 +18,21 @@
   <div class="container text-center">
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="p-4 h-100 border rounded shadow-sm bg-white">
+        <div class="p-4 h-100 border rounded-4 shadow-sm bg-white">
           <i class="bi bi-cash-coin feature-icon display-3 text-success"></i>
           <h5 class="fw-bold mt-3 text-decoration-underline">Affordable</h5>
           <p class="text-muted">Pure farm milk at prices every family can enjoy daily.</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="p-4 h-100 border rounded shadow-sm bg-white">
+        <div class="p-4 h-100 border rounded-4 shadow-sm bg-white">
           <i class="bi bi-truck feature-icon display-3 text-success"></i>
           <h5 class="fw-bold mt-3 text-decoration-underline">Accessible</h5>
           <p class="text-muted">Delivered on time to your doorstep across the city.</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="p-4 h-100 border rounded shadow-sm bg-white">
+        <div class="p-4 h-100 border rounded-4 shadow-sm bg-white">
           <i class="bi bi-shield-check feature-icon display-3 text-success"></i>
           <h5 class="fw-bold mt-3 text-decoration-underline">Assured</h5>
           <p class="text-muted">100% pure, chemical-free milk your family can trust.</p>
@@ -67,21 +67,16 @@
     <div class="row g-4 justify-content-center">
       <!-- Product 1 -->
       <div class="col-md-3 col-sm-6">
-        <div class="card product-card shadow-sm border-0 rounded-4 text-center p-3">
+        <div class="card product-card shadow-sm border-0 rounded-4 text-center p-3" routerLink="/milk-product"
+          style="cursor: pointer;">
 
           <!-- Image Container -->
           <div class="position-relative">
             <img src="/Images/milklogo.png" class="product-img mx-auto rounded" alt="Pure Cow Milk"
-              style="filter: blur(2px); opacity: 0.7; width: 100%; max-width: 180px; height: auto;">
+              style=" width: 100%; max-width: 180px; height: auto;"
+              onmouseover="this.style.transform='scale(1.1)'; this.style.transition='transform 0.5s ease';"
+              onmouseout="this.style.transform='scale(1)'; this.style.transition='transform 0.5s ease';">
 
-            <!-- Coming Soon Overlay -->
-            <div
-              class="position-absolute top-50 start-50 translate-middle bg-white bg-opacity-50 backdrop-blur rounded shadow-lg d-flex align-items-center justify-content-center"
-              style="width: 120px; height: 50px;">
-              <span class="fw-bold text-dark" style="font-size: 12px;">
-                Coming Soon
-              </span>
-            </div>
           </div>
 
           <!-- Card Body -->
@@ -100,7 +95,7 @@
 
           <!-- Image Container -->
           <div class="position-relative">
-            <img src="/Images/milklogo.png" class="product-img mx-auto rounded" alt="Pure Cow Ghee"
+            <img src="/Images/Ghee.jpeg" class="product-img mx-auto rounded" alt="Pure Cow Ghee"
               style="filter: blur(2px); opacity: 0.7; width: 100%; max-width: 180px; height: auto;">
 
             <!-- Coming Soon Overlay -->
@@ -129,7 +124,7 @@
 
           <!-- Image Container -->
           <div class="position-relative">
-            <img src="/Images/milklogo.png" class="product-img mx-auto rounded" alt="Natural Honey"
+            <img src="/Images/fresh-sweet-curd-500x480.webp" class="product-img mx-auto rounded" alt="Fresh Curd"
               style="filter: blur(2px); opacity: 0.7; width: 100%; max-width: 180px; height: auto;">
 
             <!-- Coming Soon Overlay -->
@@ -144,9 +139,9 @@
 
           <!-- Card Content -->
           <div class="card-body">
-            <h6 class="fw-bold">Natural Honey</h6>
+            <h6 class="fw-bold">Fresh Curd</h6>
             <p class="text-muted small">
-              UB's honey is unprocessed, unsweetened and freshly collected from a local farm.
+              NFM's curd is creamy, thick, made from fresh milk with no added preservatives.
             </p>
           </div>
         </div>
@@ -158,7 +153,7 @@
 
           <!-- Image Container -->
           <div class="position-relative">
-            <img src="/Images/milklogo.png" class="product-img mx-auto rounded" alt="Paneer"
+            <img src="/Images/paneer.jpeg" class="product-img mx-auto rounded" alt="Paneer"
               style="filter: blur(2px); opacity: 0.7; width: 100%; max-width: 180px; height: auto;">
 
             <!-- Coming Soon Overlay -->
@@ -193,28 +188,27 @@
 
 
 <!-- Overview Section -->
-<!-- Overview Section -->
 <section class="py-5 bg-white">
   <div class="container text-center">
-    <h3 class="fw-bold text-center mb-5 text-success">Overview Of UB</h3>
+    <h3 class="fw-bold text-center mb-5 text-success">Overview Of NFM</h3>
     <div class="row justify-content-center">
 
       <!-- Customers -->
       <div class="col-6 col-md-3 mb-4">
-        <i class="bi bi-people-fill display-3 text-success"></i>
-        <h6 class="mt-3">10,000+ Customers</h6>
+        <i class="bi bi-people-fill display-4 text-success"></i>
+        <h6 class="mt-3">100+ Customers</h6>
       </div>
 
       <!-- Liters -->
       <div class="col-6 col-md-3 mb-4">
-        <i class="bi bi-bucket-fill display-3 text-success"></i>
-        <h6 class="mt-3">7,000+ Liters</h6>
+        <i class="bi bi-droplet-half display-4 text-success"></i>
+        <h6 class="mt-3">50+ Liters</h6>
       </div>
 
       <!-- Areas -->
       <div class="col-6 col-md-3 mb-4">
-        <i class="bi bi-geo-alt-fill display-3 text-success"></i>
-        <h6 class="mt-3">190+ Areas</h6>
+        <i class="bi bi-geo-alt-fill display-4 text-success"></i>
+        <h6 class="mt-3">20+ Areas</h6>
       </div>
 
     </div>
