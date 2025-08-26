@@ -27,5 +27,4 @@ export const routes: Routes = [
   { path: 'profile', component:ProfileComponent},
   { path:'admin-portal', component:AdminPortalComponent},
   { path:'employee-portal', component:EmployeePortalComponent},
-
 ];

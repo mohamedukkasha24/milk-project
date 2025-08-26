@@ -9,7 +9,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto" id="uid">
         <li class="nav-item">
           <a class="nav-link fw-semibold" routerLink="/" routerLinkActive="active-link">Home</a>
         </li>
@@ -28,7 +28,7 @@
         </li> -->
 
         <!-- If user IS logged in -->
-        <!-- <li class="nav-item dropdown" *ngIf="auth.isLoggedIn()">
+        <li class="nav-item dropdown" *ngIf="auth.isLoggedIn()">
           <a class="nav-link dropdown-toggle fw-semibold text-success" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             <img [src]="auth.getActiveUser()?.avatar || 'assets/default-avatar.png'" width="30" height="30"
@@ -42,7 +42,7 @@
             </li>
             <li><a class="dropdown-item  text-danger" (click)="auth.logout()">Logout</a></li>
           </ul>
-        </li> -->
+        </li>
 
 
 
@@ -103,18 +103,19 @@
           <a href="https://x.com/" class="text-secondary social-icon" target="_blank"><i
               class="bi bi-twitter-x fs-5"></i></a>
         </div>
-        <div class="d-block mt-4 text-center">
+        <!-- <div class="d-block mt-4 text-center">
           <h6 class="fw-bold text-success text-center">Login</h6>
-          <a  routerLink="/admin-portal" class="text-secondary nav-link">Admin </a>
-          <a  routerLink="/employee-portal" class="text-secondary nav-link">Employee </a>
-        </div>
+          <a routerLink="/login" [queryParams]="{ role: 'admin' }" class="text-secondary nav-link">Admin</a>
+          <a routerLink="/login" [queryParams]="{ role: 'user' }" class="text-secondary nav-link">Employee</a>
+
+        </div> -->
       </div>
 
 
     </div>
 
     <!-- Copyright -->
-    <div class="text-center mt-3 border-top border-secondary pt-2">admin
+    <div class="text-center mt-3 border-top border-secondary pt-2">
       <small>© 2025 Nellai Fresh Milk </small>
     </div>
   </div>

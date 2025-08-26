@@ -68,11 +68,25 @@ export class AuthService {
     return JSON.parse(localStorage.getItem(this.sessionKey) || 'null');
   }
 
+  // logout() {
+  //   const confirmed = confirm('Are you sure you want to logout?');
+  //   if (confirmed) {
+  //     localStorage.removeItem(this.sessionKey);
+  //     this.router.navigate(['/login']);
+  //   }
+  // }
   logout() {
     const confirmed = confirm('Are you sure you want to logout?');
     if (confirmed) {
+      const role = localStorage.getItem('role');
       localStorage.removeItem(this.sessionKey);
-      this.router.navigate(['/login']);
+      localStorage.removeItem('role');
+
+      if (role === 'admin') {
+        this.router.navigate(['/admin-login']);
+      } else {
+        this.router.navigate(['/login']);
+      }
     }
   }
 

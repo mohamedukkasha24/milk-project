@@ -66,7 +66,7 @@ export class SignupComponent {
     if (this.signupForm.valid) {
       const success = this.auth.signup(this.signupForm.value);
       if (success) {
-        this.router.navigate(['/']); // redirect to home
+        this.router.navigate(['/employee-portal']); // redirect to home
       } else {
         this.errorMessage = 'User already exists. Please login!';
       }

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 @Component({
@@ -12,15 +12,23 @@ import { AuthService } from '../../services/auth.service';
 })
 export class LoginComponent {
   errorMessage = '';
-   loginForm: FormGroup;
+  loginForm: FormGroup;
   showPassword = false;
 
-  constructor(private fb: FormBuilder, private router: Router, private auth: AuthService) {
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private auth: AuthService,
+    private route: ActivatedRoute
+  ) {
     const remembered = this.auth.getRememberedCredentials();
 
     this.loginForm = this.fb.group({
       email: [remembered.email, [Validators.required, Validators.email]],
-      password: [remembered.password, [Validators.required, Validators.minLength(6)]],
+      password: [
+        remembered.password,
+        [Validators.required, Validators.minLength(6)],
+      ],
       rememberMe: [!!remembered.email],
     });
   }
@@ -32,14 +40,29 @@ export class LoginComponent {
   onSubmit(): void {
     if (this.loginForm.valid) {
       const { email, password, rememberMe } = this.loginForm.value;
+
+      // ✅ Special case for Admin
+      if (email === 'admin@gmail.com' && password === 'CEOANAND') {
+        this.router.navigate(['/admin-portal']);
+        return;
+      }
+
+      // ✅ Normal user login
       const success = this.auth.login(email, password, rememberMe);
 
       if (success) {
-        this.router.navigate(['/']); // go home
+        this.router.navigate(['/employee-portal']); // go home
       } else {
         alert('Invalid credentials or please sign up first.');
       }
     }
   }
 
+  isAdmin = false;
+
+  ngOnInit(): void {
+    this.route.queryParams.subscribe((params) => {
+      this.isAdmin = params['role'] === 'admin';
+    });
+  }
 }

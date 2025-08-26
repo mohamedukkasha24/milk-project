@@ -50,8 +50,10 @@
                 {{ errorMessage }}
             </div>
             <!-- Signup -->
-            <p class="text-center mt-4 mb-0 small">
-                Don’t have an account? <a routerLink="/signup" class="text-success fw-semibold">Sign Up</a>
+            <!-- Signup link (only for non-admins) -->
+            <p class="text-center mt-4 mb-0 small" *ngIf="!isAdmin">
+                Don’t have an account?
+                <a routerLink="/signup" class="text-success fw-semibold">Sign Up</a>
             </p>
         </form>
     </div>
